@@ -1,0 +1,132 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0a2351;
+    margin: 0;
+}
+
+.container{
+    margin:50px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#title{
+    margin: 0px;
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #0f3272;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#search-input {
+    flex: 1;
+    color: white;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    #search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #search-input {
+        flex: none;
+        margin-bottom: 10px;
+    }
+}
+
+
+#search-btn{
+    color: whitesmoke;
+    background-color:rgb(116, 43, 226);
+    border: none;
+    padding: 15px 35px;
+    outline: 0;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+#search-btn:active{
+    background-color: whitesmoke;
+    color: rgb(116, 43, 226);
+}
+
+#show-more-btn:active{
+    background-color: whitesmoke;
+    color: rgb(116, 43, 226);
+}
+
+::placeholder{
+    color: rgba(245, 245, 245, 0.500);
+}
+
+p{
+    margin: 20px auto 5px;
+    color: rgba(245, 245, 245, 0.3);
+    font-size: 12px;
+}
+
+#show-more-btn{
+    padding: 10px 20px;
+    margin: 0px auto;
+    font-size: 13px;
+    color: whitesmoke;
+    background-color: rgb(116, 43, 226);
+    border: none;
+    outline: 0;
+    border-radius: 5px;
+    padding: 12px 25px;
+    display: none;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+#search-results {
+    margin: 50px auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 35px;
+}
+
+#search-results img {
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    #search-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+body button:hover{
+    opacity: 0.8;
+}
